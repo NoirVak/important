@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access our legal documents: Terms of Service and Privacy Policy.">
     <title>Legal Documents</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -12,13 +15,13 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Dosis', sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
         }
 
-        .container {
+        main.container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -34,18 +37,21 @@
         }
 
         h1 {
-            color: #2c3e50;
+            color: #3696bf;
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .subtitle {
             color: #7f8c8d;
             font-size: 1.1rem;
+            font-weight: 700;
         }
 
         .legal-links {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -58,6 +64,7 @@
             text-decoration: none;
             color: inherit;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 700;
         }
 
         .legal-card:hover {
@@ -66,9 +73,13 @@
         }
 
         .legal-card h2 {
-            color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #3696bf;
             font-size: 1.8rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .legal-card p {
@@ -77,8 +88,7 @@
         }
 
         .legal-card .arrow {
-            float: right;
-            color: #3498db;
+            color: #3696bf;
             font-size: 1.2rem;
             font-weight: bold;
         }
@@ -91,37 +101,52 @@
         }
 
         @media (max-width: 768px) {
-            .container {
+            main.container {
                 padding: 10px;
             }
-            
             h1 {
                 font-size: 2rem;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f1f1f1;
+            }
+            .legal-card {
+                background-color: #1e1e1e;
+                box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+            }
+            header, footer {
+                background-color: #1a1a1a;
+                color: #ccc;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container" role="main">
         <header>
             <h1>Legal Documents</h1>
             <p class="subtitle">Terms of Service & Privacy Policy</p>
         </header>
 
         <div class="legal-links">
-            <a href="legal/tos.html" class="legal-card">
+            <a href="legal/tos.html" class="legal-card" aria-label="View Terms of Service document">
                 <h2>Terms of Service <span class="arrow">→</span></h2>
                 <p>Our terms and conditions governing the use of our services</p>
             </a>
 
-            <a href="legal/privacy.html" class="legal-card">
+            <a href="legal/privacy.html" class="legal-card" aria-label="View Privacy Policy document">
                 <h2>Privacy Policy <span class="arrow">→</span></h2>
                 <p>How we collect, use, and protect your personal information</p>
+
             </a>
         </div>
-    </div>
+    </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; 2025 [Your Organization Name]. All rights reserved.</p>
     </footer>
 </body>
