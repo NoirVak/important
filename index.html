@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service & Privacy Policy</title>
+    <title>Legal Documents</title>
     <style>
         * {
             margin: 0;
@@ -44,93 +44,43 @@
             font-size: 1.1rem;
         }
 
-        .nav-tabs {
-            display: flex;
-            margin-bottom: 2rem;
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .legal-links {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .tab-button {
-            flex: 1;
-            padding: 1rem 2rem;
-            background: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #7f8c8d;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-
-        .tab-button:hover {
-            background: #f8f9fa;
-            color: #2c3e50;
-        }
-
-        .tab-button.active {
-            color: #3498db;
-            border-bottom-color: #3498db;
-            background: #f8f9fa;
-        }
-
-        .content-section {
+        .legal-card {
             background: #fff;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: none;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .content-section.active {
-            display: block;
+        .legal-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
-        .content-section h2 {
+        .legal-card h2 {
             color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #ecf0f1;
-        }
-
-        .content-section h3 {
-            color: #34495e;
-            font-size: 1.4rem;
-            margin: 2rem 0 1rem 0;
-        }
-
-        .content-section p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-
-        .content-section ul {
-            margin-left: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
         }
 
-        .content-section li {
-            margin-bottom: 0.5rem;
+        .legal-card p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
         }
 
-        .last-updated {
-            background: #e8f4f8;
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 2rem;
-            border-left: 4px solid #3498db;
-        }
-
-        .contact-info {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin-top: 2rem;
-            border-left: 4px solid #27ae60;
+        .legal-card .arrow {
+            float: right;
+            color: #3498db;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         footer {
@@ -148,19 +98,6 @@
             h1 {
                 font-size: 2rem;
             }
-            
-            .nav-tabs {
-                flex-direction: column;
-            }
-            
-            .tab-button {
-                border-bottom: 1px solid #ecf0f1;
-                border-right: none;
-            }
-            
-            .tab-button.active {
-                border-bottom-color: #3498db;
-            }
         }
     </style>
 </head>
@@ -171,153 +108,21 @@
             <p class="subtitle">Terms of Service & Privacy Policy</p>
         </header>
 
-        <div class="nav-tabs">
-            <button class="tab-button active" onclick="showTab('tos')">Terms of Service</button>
-            <button class="tab-button" onclick="showTab('privacy')">Privacy Policy</button>
-        </div>
+        <div class="legal-links">
+            <a href="legal/tos.html" class="legal-card">
+                <h2>Terms of Service <span class="arrow">→</span></h2>
+                <p>Our terms and conditions governing the use of our services</p>
+            </a>
 
-        <div id="tos" class="content-section active">
-            <div class="last-updated">
-                <strong>Last Updated:</strong> [DATE]
-            </div>
-            
-            <h2>Terms of Service</h2>
-            
-            <h3>1. Acceptance of Terms</h3>
-            <p>By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
-
-            <h3>2. Description of Service</h3>
-            <p>[Describe your service/organization here. Replace this placeholder text with information about what your organization does and what services you provide.]</p>
-
-            <h3>3. User Responsibilities</h3>
-            <p>Users are responsible for:</p>
-            <ul>
-                <li>Providing accurate and truthful information</li>
-                <li>Maintaining the confidentiality of account credentials</li>
-                <li>Complying with all applicable laws and regulations</li>
-                <li>Respecting the rights of other users</li>
-            </ul>
-
-            <h3>4. Prohibited Uses</h3>
-            <p>You may not use our service:</p>
-            <ul>
-                <li>For any unlawful purpose or to solicit others to perform unlawful acts</li>
-                <li>To violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances</li>
-                <li>To infringe upon or violate our intellectual property rights or the intellectual property rights of others</li>
-                <li>To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate</li>
-                <li>To submit false or misleading information</li>
-            </ul>
-
-            <h3>5. Limitation of Liability</h3>
-            <p>In no event shall [Your Organization Name] be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.</p>
-
-            <h3>6. Termination</h3>
-            <p>We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever including without limitation if you breach the Terms.</p>
-
-            <h3>7. Changes to Terms</h3>
-            <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.</p>
-
-            <div class="contact-info">
-                <strong>Contact Information:</strong><br>
-                Email: [your-email@example.com]<br>
-                Address: [Your Organization Address]
-            </div>
-        </div>
-
-        <div id="privacy" class="content-section">
-            <div class="last-updated">
-                <strong>Last Updated:</strong> [DATE]
-            </div>
-            
-            <h2>Privacy Policy</h2>
-            
-            <h3>1. Information We Collect</h3>
-            <p>We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.</p>
-            
-            <p><strong>Personal Information may include:</strong></p>
-            <ul>
-                <li>Name and contact information</li>
-                <li>Account credentials</li>
-                <li>Communication preferences</li>
-                <li>Any other information you choose to provide</li>
-            </ul>
-
-            <h3>2. How We Use Your Information</h3>
-            <p>We use the information we collect to:</p>
-            <ul>
-                <li>Provide, maintain, and improve our services</li>
-                <li>Process transactions and send related information</li>
-                <li>Send technical notices, updates, security alerts, and support messages</li>
-                <li>Respond to your comments, questions, and customer service requests</li>
-                <li>Communicate with you about products, services, and events</li>
-            </ul>
-
-            <h3>3. Information Sharing</h3>
-            <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
-            
-            <p>We may share your information:</p>
-            <ul>
-                <li>With your consent</li>
-                <li>To comply with legal obligations</li>
-                <li>To protect our rights and safety</li>
-                <li>In connection with a business transaction</li>
-            </ul>
-
-            <h3>4. Data Security</h3>
-            <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-
-            <h3>5. Data Retention</h3>
-            <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required by law.</p>
-
-            <h3>6. Your Rights</h3>
-            <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
-            <ul>
-                <li>The right to access your personal information</li>
-                <li>The right to correct inaccurate information</li>
-                <li>The right to delete your personal information</li>
-                <li>The right to restrict processing</li>
-                <li>The right to data portability</li>
-            </ul>
-
-            <h3>7. Cookies and Tracking</h3>
-            <p>We use cookies and similar tracking technologies to enhance your experience on our services. You can control cookies through your browser settings.</p>
-
-            <h3>8. Changes to This Policy</h3>
-            <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last Updated" date.</p>
-
-            <div class="contact-info">
-                <strong>Contact Information:</strong><br>
-                For questions about this Privacy Policy, please contact us at:<br>
-                Email: [your-privacy-email@example.com]<br>
-                Address: [Your Organization Address]
-            </div>
+            <a href="legal/privacy.html" class="legal-card">
+                <h2>Privacy Policy <span class="arrow">→</span></h2>
+                <p>How we collect, use, and protect your personal information</p>
+            </a>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 [Your Organization Name]. All rights reserved.</p>
     </footer>
-
-    <script>
-        function showTab(tabName) {
-            // Hide all content sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(button => {
-                button.classList.remove('active');
-            });
-            
-            // Show selected section
-            document.getElementById(tabName).classList.add('active');
-            
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-    </script>
 </body>
 </html>
