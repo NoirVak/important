@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read our Privacy Policy to understand how we handle your personal information.">
     <title>Privacy Policy</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -12,152 +15,223 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #e2e8f0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
 
         .breadcrumb {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
         }
 
         .breadcrumb a {
-            color: #3498db;
+            color: #3b82f6;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .breadcrumb a:hover {
-            text-decoration: underline;
+            color: #60a5fa;
         }
 
         .breadcrumb span {
-            color: #7f8c8d;
+            color: #64748b;
             margin: 0 0.5rem;
         }
 
         header {
-            background: #fff;
-            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.3);
+            padding: 3rem 2rem;
             margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            text-align: center;
         }
 
         h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            color: #3b82f6;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-links {
             display: flex;
             gap: 1rem;
-            margin-top: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
         }
 
         .nav-link {
-            padding: 0.5rem 1rem;
-            background: #ecf0f1;
-            color: #2c3e50;
+            padding: 0.75rem 1.5rem;
+            background: rgba(51, 65, 85, 0.3);
+            color: #cbd5e1;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 0.9rem;
-            transition: background 0.3s ease;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(51, 65, 85, 0.5);
         }
 
         .nav-link:hover {
-            background: #d5dbdb;
+            background: rgba(51, 65, 85, 0.6);
+            transform: translateY(-2px);
         }
 
         .nav-link.active {
-            background: #3498db;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
             color: #fff;
+            border-color: #3b82f6;
         }
 
         .content-section {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.3);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+
+        .last-updated {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            border-left: 4px solid #3b82f6;
         }
 
         .content-section h2 {
-            color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #ecf0f1;
+            color: #3b82f6;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-align: center;
         }
 
         .content-section h3 {
-            color: #34495e;
-            font-size: 1.4rem;
-            margin: 2rem 0 1rem 0;
+            color: #06b6d4;
+            font-size: 1.5rem;
+            margin: 3rem 0 1.5rem 0;
+            font-weight: 600;
         }
 
         .content-section p {
-            margin-bottom: 1rem;
-            text-align: justify;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #cbd5e1;
         }
 
         .content-section ul {
             margin-left: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         .content-section li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            color: #cbd5e1;
+            font-size: 1.05rem;
         }
 
-        .last-updated {
-            background: #e8f4f8;
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 2rem;
-            border-left: 4px solid #3498db;
+        .content-section li::marker {
+            color: #3b82f6;
         }
 
         .contact-info {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 6px;
-            margin-top: 2rem;
-            border-left: 4px solid #27ae60;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            border-left: 4px solid #06b6d4;
+        }
+
+        .contact-info strong {
+            color: #06b6d4;
+            font-size: 1.2rem;
         }
 
         footer {
             text-align: center;
-            padding: 2rem 0;
-            color: #7f8c8d;
-            margin-top: 2rem;
+            padding: 3rem 0;
+            color: #64748b;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+        }
+
+        /* Glowing effects */
+        .content-section {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 15px;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
-
+            
+            .content-section {
+                padding: 2rem;
+            }
+            
             .nav-links {
                 flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-link {
+                width: 200px;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" role="main">
         <div class="breadcrumb">
-            <a href="../index.html">Legal Documents</a>
+            <a href="../index.html" aria-label="Back to Legal Documents">Legal Documents</a>
             <span>/</span>
             <span>Privacy Policy</span>
         </div>
@@ -165,14 +239,14 @@
         <header>
             <h1>Privacy Policy</h1>
             <div class="nav-links">
-                <a href="tos.html" class="nav-link">Terms of Service</a>
-                <a href="#" class="nav-link active">Privacy Policy</a>
+                <a href="tos.html" class="nav-link" aria-label="View Terms of Service">Terms of Service</a>
+                <a href="#" class="nav-link active" aria-label="View Privacy Policy">Privacy Policy</a>
             </div>
         </header>
 
         <div class="content-section">
             <div class="last-updated">
-                <strong>Last Updated:</strong> [DATE]
+                <strong>Last Updated:</strong> January 15, 2025
             </div>
             
             <h2>Privacy Policy</h2>
@@ -232,16 +306,15 @@
             <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last Updated" date.</p>
 
             <div class="contact-info">
-                <strong>Contact Information:</strong><br>
+                <strong>Contact Information:</strong><br><br>
                 For questions about this Privacy Policy, please contact us at:<br>
-                Email: [your-privacy-email@example.com]<br>
-                Address: [Your Organization Address]
+                <strong>Email:</strong> privacy@yourcompany.com
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 [Your Organization Name]. All rights reserved.</p>
+    <footer role="contentinfo">
+        <p>&copy; 2025 NoirVak. All rights reserved.</p>
     </footer>
 </body>
 </html>
