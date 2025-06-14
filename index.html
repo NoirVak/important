@@ -6,7 +6,7 @@
     <meta name="description" content="Access our legal documents: Terms of Service and Privacy Policy.">
     <title>Legal Documents</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -15,112 +15,184 @@
         }
 
         body {
-            font-family: 'Dosis', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #e2e8f0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
         }
 
         main.container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
 
         header {
-            background: #fff;
-            padding: 2rem 0;
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.3);
+            padding: 3rem 2rem;
             margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 16px;
             text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
-            color: #3696bf;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            color: #3b82f6;
+            font-size: 3rem;
+            margin-bottom: 1rem;
             font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
-            color: #7f8c8d;
-            font-size: 1.1rem;
-            font-weight: 700;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.9;
         }
 
         .legal-links {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
         .legal-card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.3);
+            padding: 2.5rem;
+            border-radius: 16px;
             text-decoration: none;
             color: inherit;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            font-weight: 700;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .legal-card:hover::before {
+            transform: scaleX(1);
         }
 
         .legal-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.4);
+            border-color: rgba(59, 130, 246, 0.3);
         }
 
         .legal-card h2 {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #3696bf;
+            color: #3b82f6;
             font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
 
         .legal-card p {
-            color: #7f8c8d;
+            color: #cbd5e1;
             font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.9;
         }
 
         .legal-card .arrow {
-            color: #3696bf;
-            font-size: 1.2rem;
+            color: #06b6d4;
+            font-size: 1.5rem;
             font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .legal-card:hover .arrow {
+            transform: translateX(4px);
         }
 
         footer {
             text-align: center;
-            padding: 2rem 0;
-            color: #7f8c8d;
-            margin-top: 2rem;
+            padding: 3rem 0;
+            color: #64748b;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
         }
 
         @media (max-width: 768px) {
             main.container {
-                padding: 10px;
+                padding: 15px;
             }
+            
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+            
+            .legal-links {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .legal-card {
+                padding: 2rem;
+            }
+            
+            header {
+                padding: 2.5rem 1.5rem;
             }
         }
 
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #f1f1f1;
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
             }
-            .legal-card {
-                background-color: #1e1e1e;
-                box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+            
+            .subtitle {
+                font-size: 1rem;
             }
-            header, footer {
-                background-color: #1a1a1a;
-                color: #ccc;
+            
+            .legal-card h2 {
+                font-size: 1.5rem;
+            }
+            
+            .legal-card p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -135,13 +207,12 @@
         <div class="legal-links">
             <a href="legal/tos.html" class="legal-card" aria-label="View Terms of Service document">
                 <h2>Terms of Service <span class="arrow">→</span></h2>
-                <p>Our terms and conditions governing the use of our services</p>
+                <p>Our comprehensive terms and conditions governing the use of our services, outlining user responsibilities and platform guidelines</p>
             </a>
 
             <a href="legal/privacy.html" class="legal-card" aria-label="View Privacy Policy document">
                 <h2>Privacy Policy <span class="arrow">→</span></h2>
-                <p>How we collect, use, and protect your personal information</p>
-
+                <p>Detailed information about how we collect, use, protect, and manage your personal information and data privacy</p>
             </a>
         </div>
     </main>
